@@ -34,6 +34,10 @@ app.get('/health', (req, res) => {
   res.status(200).send("Success Health Check");
 })
 
+app.get('/', (req, res) => {
+  res.send('Hello, kuma!');
+});
+
 app.get('/boards', async (req, res) => {
   await Board.create({
     title: "게시글 제목",
